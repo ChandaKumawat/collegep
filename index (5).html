@@ -13,7 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
 </head>
 
@@ -43,7 +44,7 @@
                 <div class="text-1">Hello, My name is</div>
                 <div class="text-2">Chanda Kumawat</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="mailto:chandakumawat2511@gmail.com">Hire me</a>
+                <a href="mailto: chandakumawat2511@gmail.com">Hire me</a>
                 <a href="Ms_Chanda Kumawat_cv_4704.pdf">Download CV</a>
             </div>
         </div>
@@ -170,26 +171,26 @@
         </div>
         <div class="column right">
             <div class="text">Let's have a quick chat</div>
-            <form action="#">
+            <form id="feedbackForm">
                 <div class="fields">
                     <div class="field name">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Name" name="name" required>
                     </div>
                     <div class="field phone no.">
-                        <input type="text" placeholder="Phone no" required>
+                        <input type="text" placeholder="Phone no" name ="phone no" required>
                     </div>
                     <div class="field email" style="margin-left: 10px;">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" placeholder="Email" name ="email" required>
                     </div>
                 </div>
                 <div class="field">
-                    <input type="text" placeholder="Subject" required>
+                    <input type="text" placeholder="Subject" name ="subject" required>
                 </div>
                 <div class="field textarea">
-                    <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                    <textarea cols="30" rows="10" placeholder="Message.." name="message" required></textarea>
                 </div>
                 <div class="button-area">
-                    <button type="submit">Send message</button>
+                    <button type="submit" onclick="sendMail(event)">Send message</button>
                 </div>
             </form>
         </div>

@@ -70,4 +70,28 @@ $(document).ready(function(){
             }
         }
     });
+    (function() {
+        emailjs.init("81F9IbdL2grtIHswF"); // Replace 'YOUR_USER_ID' with your actual user ID from EmailJS
+    })();
+
+    function sendMail(event) {
+        event.preventDefault();
+
+        var templateParams = {
+            name: document.querySelector('input[name="name"]').value,
+            phone_no: document.querySelector('input[name="phone no"]').value,
+            email: document.querySelector('input[name="email"]').value,
+            subject: document.querySelector('input[name="subject"]').value,
+            message: document.querySelector('textarea[name="message"]').value
+        };
+
+        emailjs.send('service_1svqfys', 'template_vas8fr8', templateParams)
+            .then(function(response) {
+               console.log('SUCCESS!', response.status, response.text);
+               alert("Message sent successfully!");
+            }, function(error) {
+               console.log('FAILED...', error);
+               alert("Failed to send message! Please try again.");
+            });
+    }
 });
